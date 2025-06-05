@@ -4,6 +4,7 @@ const StyleGlobal = createGlobalStyle`
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
+  font-family: "Roboto", sans-serif;
 }
 body {
   margin: 0;
