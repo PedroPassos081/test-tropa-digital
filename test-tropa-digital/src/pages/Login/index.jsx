@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import StyleGlobal from "../../components/StylesGlobal";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/icon.svg";
 import CampoDigitacao from "../../components/CampoDigitacao";
 import { useState } from "react";
@@ -67,13 +67,25 @@ const ContainerImage = styled.div`
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [erro, setErro] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if (email === "teste@teste.com" && senha === "1234") {
+      navigate("/home"); // redireciona para a rota /home
+    } else {
+      setErro("E-mail ou senha inválidos.");
+    }
+  };
 
   return (
     <BackgroundColor>
-      <StyleGlobal />
       <Container>
         <FormContainer>
-          <LoginForm>
+          <LoginForm onSubmit={handleLogin}>
             <img src={logo} alt="Logo" />
             <TextLogin>Bem-vindo de volta</TextLogin>
             <Paragraph>Entre com sua conta para acessar o painel.</Paragraph>
@@ -92,6 +104,7 @@ function Login() {
               label="Senha"
             />
             <Botao>Enviar</Botao>
+            {erro && <p style={{ color: "red" }}>{erro}</p>}
           </LoginForm>
           <SecondContainer>
             <ContainerImage>
