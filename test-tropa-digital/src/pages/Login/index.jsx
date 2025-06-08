@@ -5,6 +5,7 @@ import CampoDigitacao from "../../components/CampoDigitacao";
 import { useState } from "react";
 import Botao from "../../components/Button";
 import boneco from "../../assets/boneco-login.png";
+import Paragraph from "../../components/Paragraph";
 
 const BackgroundColor = styled.div`
   background: #f9fbff;
@@ -42,12 +43,6 @@ const TextLogin = styled.h1`
   color: #cc6237;
   padding: 22px 0 0 0;
   margin: 0;
-`;
-
-const Paragraph = styled.p`
-  font-size: 14px;
-  font-weight: 400;
-  color: #2a4d8e80;
 `;
 
 const SecondContainer = styled.div`

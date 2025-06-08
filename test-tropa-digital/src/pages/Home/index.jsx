@@ -1,9 +1,7 @@
+import Sidebar from "../../components/Sidebar";
+
 function Home() {
-  return (
-    <div>
-      <h1>Bem-vindo ao Tropa Digital</h1>
-    </div>
-  );
+  return <Sidebar />;
 }
 
 export default Home;

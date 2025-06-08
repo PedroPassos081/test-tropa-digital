@@ -9,6 +9,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  background-color: #F8F8F8;
 }
 main {
   display: block;
