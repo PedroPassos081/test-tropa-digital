@@ -55,8 +55,14 @@ const SecondContainer = styled.div`
 `;
 
 const ContainerImage = styled.div`
-  display: flex;
-  margin-top: 144px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+const BonecoImagem = styled.img`
+  position: absolute;
+  left: -40px; /* Move a imagem para fora do container */
+  bottom: 0;
 `;
 
 function Login() {
@@ -83,7 +89,9 @@ function Login() {
           <LoginForm onSubmit={handleLogin}>
             <img src={logo} alt="Logo" />
             <TextLogin>Bem-vindo de volta</TextLogin>
-            <Paragraph>Entre com sua conta para acessar o painel.</Paragraph>
+            <Paragraph style={{ marginBottom: "25px" }}>
+              Entre com sua conta para acessar o painel.
+            </Paragraph>
             <CampoDigitacao
               valor={email}
               tipo="text"
@@ -103,7 +111,7 @@ function Login() {
           </LoginForm>
           <SecondContainer>
             <ContainerImage>
-              <img src={boneco} alt="Boneco" />
+              <BonecoImagem src={boneco} alt="Boneco" />
             </ContainerImage>
           </SecondContainer>
         </FormContainer>
