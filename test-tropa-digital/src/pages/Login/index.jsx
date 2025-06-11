@@ -4,7 +4,7 @@ import logo from "../../assets/icon.svg";
 import CampoDigitacao from "../../components/CampoDigitacao";
 import { useState } from "react";
 import Botao from "../../components/Button";
-import boneco from "../../assets/boneco-login.png";
+import boneco from "../../../assets/boneco-login.png";
 import Paragraph from "../../components/Paragraph";
 
 const BackgroundColor = styled.div`
